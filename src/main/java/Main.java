@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-//        Dog dog1 = new Dog("Sammy", 8, "Husky");
-//        Dog dog2 = new Dog("James", 2, "Black Lab");
+        Dog dog1 = new Dog("Sammy", 8, "Husky");
+        Dog dog2 = new Dog("James", 2, "Black Lab");
 //        DogQueue dogQueue = new DogQueue(2);
 //
 //        dogQueue.enQueue(dog1);
@@ -18,14 +18,23 @@ public class Main {
 
         CatQueue catQueue = new CatQueue(2);
 
-        catQueue.enQueue(cat1);
-        catQueue.enQueue(cat2);
+//        catQueue.enQueue(cat1);
+//        catQueue.enQueue(cat2);
+//
+//        catQueue.peek();
+//
+//        catQueue.deQueue();
+//
+//        catQueue.peek();
 
-        catQueue.peek();
+        AnimalQueue animalQueue = new AnimalQueue(2);
 
-        catQueue.deQueue();
+        animalQueue.enQueue(dog1);
+        animalQueue.enQueue(cat1);
 
-        catQueue.peek();
+        animalQueue.peek();
+        animalQueue.deQueue();
+        animalQueue.peek();
 
     }
 }
