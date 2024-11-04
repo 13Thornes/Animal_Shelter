@@ -1,22 +1,22 @@
-public class DogQueue {
-    private Dog[] dogArr;
+public class CatQueue {
+    private Cat[] catArr;
     private int backOfQueue;
     private int numOfItems;
     int beginningOfQueue;
 
-    public DogQueue(int size) {
-        this.dogArr = new Dog[size];
+    public CatQueue(int size) {
+        this.catArr = new Cat[size];
         this.backOfQueue = -1;
         this.beginningOfQueue = -1;
         this.numOfItems = 0;
 
-        System.out.println("The dog queue was successfully created with size of: " + size);
+        System.out.println("New cat queue was successfully created with size of: " + size);
     }
 
 
 
     public Boolean isFull() {
-        if (backOfQueue == dogArr.length-1) {
+        if (backOfQueue == catArr.length-1) {
             return true;
         } else  {
             return false;
@@ -28,30 +28,30 @@ public class DogQueue {
         return (numOfItems == 0);
     }
 
-    public void enQueue(Dog dog) {
+    public void enQueue(Cat cat) {
         if (isFull()) {
             System.out.println("The Queue is Full");
         } else if (isEmpty()) {
             beginningOfQueue = 0;
             backOfQueue++;
             numOfItems++;
-            dogArr[backOfQueue] = dog;
-            System.out.println("Successfully inserted " + dog + " in the queue");
+            catArr[backOfQueue] = cat;
+            System.out.println("Successfully inserted " + cat + " in the queue");
         } else {
             backOfQueue++;
             numOfItems++;
-            dogArr[backOfQueue] = dog;
-            System.out.println("Successfully inserted " + dog + " in the queue");
+            catArr[backOfQueue] = cat;
+            System.out.println("Successfully inserted " + cat + " in the queue");
 
         }
     }
 
-    public Dog deQueue () {
+    public Cat deQueue () {
         if (isEmpty()){
             System.out.println("The Queue is empty");
             return null;
         } else {
-            Dog result = dogArr[beginningOfQueue];
+            Cat result = catArr[beginningOfQueue];
             beginningOfQueue++;
             if (beginningOfQueue > backOfQueue) {
                 beginningOfQueue = backOfQueue = -1;
@@ -63,10 +63,10 @@ public class DogQueue {
     }
 
     //Peek
-    public Dog peek(){
+    public Cat peek(){
         if (!isEmpty()){
-            System.out.println(dogArr[backOfQueue]);
-            return dogArr[backOfQueue];
+            System.out.println(catArr[backOfQueue]);
+            return catArr[backOfQueue];
 
         } else {
             System.out.println("The Queue is empty");

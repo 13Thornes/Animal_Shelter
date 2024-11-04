@@ -28,6 +28,6 @@ public class Cat extends Animal {
 
     @Override
     public String toString() {
-        return "Animal{" + "name='" + this.getName() + '\'' + ", age=" + this.getAge() + '}' + "Cat{" + "breed='" + breed + "color='" + color + '\'' + '}';
+        return "Animal{" + "name='" + this.getName() + '\'' + ", age=" + this.getAge() + '}' + " Cat{" + "breed='" + breed + "', color='" + color + '\'' + '}';
     }
 }
