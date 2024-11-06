@@ -1,6 +1,5 @@
-import java.lang.reflect.Type;
-
 public class Animal {
+
     private String name;
     private int age;
     private String type;

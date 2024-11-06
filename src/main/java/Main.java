@@ -1,4 +1,5 @@
 public class Main {
+
     public static void main(String[] args) {
         Dog dog1 = new Dog("Sammy", 8, "Husky", "Dog");
         Dog dog2 = new Dog("James", 2, "Black Lab", "Dog");

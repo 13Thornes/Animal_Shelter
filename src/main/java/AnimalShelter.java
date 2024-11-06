@@ -2,6 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class AnimalShelter {
+
 private Queue<Animal> animals = new LinkedList<Animal>();
 
     public AnimalShelter() {
