@@ -1,40 +1,36 @@
 public class Main {
+
     public static void main(String[] args) {
-        Dog dog1 = new Dog("Sammy", 8, "Husky");
-        Dog dog2 = new Dog("James", 2, "Black Lab");
-//        DogQueue dogQueue = new DogQueue(2);
-//
-//        dogQueue.enQueue(dog1);
-//        dogQueue.enQueue(dog2);
-//
-//        dogQueue.peek();
-//
-//        dogQueue.deQueue();
-//
-//        dogQueue.peek();
+        Dog dog1 = new Dog("Sammy", 8, "Husky", "Dog");
+        Dog dog2 = new Dog("James", 2, "Black Lab", "Dog");
+        Dog dog3 = new Dog("Bailey", 9, "Beagle", "Dog");
+        Dog dog4 = new Dog("Precious", 13, "Terrier Mix", "Dog");
 
-        Cat cat1 = new Cat("Felix", 3, "Tabby", "Orange");
-        Cat cat2 = new Cat("Kitters", 5, "Bombay", "Black");
+        Cat cat1 = new Cat("Tazzy", 3, "Cat", "Tabby", "Orange");
+        Cat cat2 = new Cat("Kitters", 5, "Cat", "Bombay", "Black");
+        Cat cat3 = new Cat("Baby", 2, "Cat", "Ragdoll", "Grey");
+        Cat cat4 = new Cat("Sparkle", 1, "Cat", "Tabby", "Brown");
 
-        CatQueue catQueue = new CatQueue(2);
+        AnimalShelter shelter = new AnimalShelter();
 
-//        catQueue.enQueue(cat1);
-//        catQueue.enQueue(cat2);
-//
-//        catQueue.peek();
-//
-//        catQueue.deQueue();
-//
-//        catQueue.peek();
+        shelter.addAnimal(dog1);
+        shelter.addAnimal(cat1);
+        shelter.addAnimal(dog2);
+        shelter.addAnimal(cat2);
+        shelter.addAnimal(dog3);
+        shelter.addAnimal(cat3);
+        shelter.addAnimal(dog4);
+        shelter.addAnimal(cat4);
 
-        AnimalQueue animalQueue = new AnimalQueue(2);
+        shelter.printAnimals();
 
-        animalQueue.enQueue(dog1);
-        animalQueue.enQueue(cat1);
+        shelter.adoptOldestAnimal();
+        shelter.printAnimals();
 
-        animalQueue.peek();
-        animalQueue.deQueue();
-        animalQueue.peek();
+        shelter.adoptOldestDog();
+        shelter.printAnimals();
 
+        shelter.adoptOldestCat();
+        shelter.printAnimals();
     }
 }

@@ -1,11 +1,13 @@
 public class Dog extends Animal {
+
     private String breed;
 
 
-    public Dog(String name, int age, String breed) {
-        super(name, age);
+    public Dog(String name, int age, String breed, String type) {
+        super(name, age, type);
         this.breed = breed;
         this.setName(name);
+        this.setType(type);
     }
 
     public String getBreed() {
@@ -18,6 +20,6 @@ public class Dog extends Animal {
 
     @Override
     public String toString() {
-        return "Animal{" + "name='" + this.getName() + '\'' + ", age=" + this.getAge() + '}' + "Dog{" + "breed='" + breed + '\'' + '}';
+        return "Animal{" + "name='" + this.getName() + '\'' + ", age=" + this.getAge() + ", type=" + this.getType()  + ", breed='" + breed + '\'' + '}';
     }
 }
