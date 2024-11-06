@@ -3,10 +3,12 @@ import java.lang.reflect.Type;
 public class Animal {
     private String name;
     private int age;
+    private String type;
 
-    public Animal(String name, int age) {
+    public Animal(String name, int age, String type) {
         this.name = name;
         this.age = age;
+        this.type = type;
     }
 
     public String getName() {
@@ -25,8 +27,16 @@ public class Animal {
         this.age = age;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
-        return "Animal{" + "name='" + name + '\'' + ", age=" + age + '}';
+        return "Animal{" + "name='" + name + '\'' + ", age=" + age + '\'' + ", type=" + type +'}';
     }
 }
